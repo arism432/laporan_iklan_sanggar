@@ -1,8 +1,8 @@
 <?php
 
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\PedanaanController;
-use App\Http\Controllers\DataIklanCotroller;
+use App\Http\Controllers\LaporanPendanaanController;
+use App\Http\Controllers\DataIklanController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,9 +20,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('admin', function () {
+    return view('admin.index');
+})->name('admin.index')->middleware('is_admin');
+
+Route::resource('admin/pendanaan', LaporanPendanaanController::class);
+Route::resource('admin/iklan', DataIklanController::class);
 Auth::routes();
 
-Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
+//Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
+
 Route::get('home', [HomeController::class, 'index'])->name('home');
 /** Guest User Route List  */
 //Route::middleware(['auth', 'user-access:guest'])->group(function(){

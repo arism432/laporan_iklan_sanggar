@@ -30,8 +30,8 @@ class LaporanPendanaanController extends Controller
             'jam_topup' => 'required',
             'jumlah_topup' => 'required',
             'jumlah_setelah_topup' => 'required',
-            'status_iklan' => 'required|20',
-            'keterangan' => 'required|255'
+            'status_iklan' => 'required|max:20',
+            'keterangan' => 'required|max:255'
         ]);
         LaporanPendanaan::create($request->all());
         return redirect()->route('pendanaan.index');
@@ -52,12 +52,12 @@ class LaporanPendanaanController extends Controller
             'jam_topup' => 'required',
             'jumlah_topup' => 'required',
             'jumlah_setelah_topup' => 'required',
-            'status_iklan' => 'required|20',
-            'keterangan' => 'required|255'
+            'status_iklan' => 'required|max:20',
+            'keterangan' => 'required|max:255'
         ]);
         LaporanPendanaan::findOrFail($id)->update([
             'daftar_ads' => $request->daftarAds,
-            'tanggal_cek_saldo' => $request->tinggalCekSaldo,
+            'tanggal_cek_saldo' => $request->tanggalCekSaldo,
             'jam_cek_saldo' => $request->jamCekSaldo,
             'jumlah_saldo' => $request->jumlahSaldo,
             'tanggal_topup' => $request->tanggalTopup,
