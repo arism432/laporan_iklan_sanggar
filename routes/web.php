@@ -26,6 +26,10 @@ Route::get('admin', function () {
 
 Route::resource('admin/pendanaan', LaporanPendanaanController::class);
 Route::resource('admin/iklan', DataIklanController::class);
+
+
+Route::resource('guest/pendanaan', LaporanPendanaanController::class);
+Route::resource('guest/iklan', DataIklanController::class);
 Auth::routes();
 
 //Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');

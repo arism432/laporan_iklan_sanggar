@@ -11,6 +11,12 @@ class LaporanPendanaanController extends Controller
     {
         $this->middleware('auth');
     }
+
+    public function indexGuests(){
+        $pendanaan = LaporanPendanaan::all();
+        return view('guest.pendanaan.index', compact('pendanaan'));
+    }
+
     public function index(){
         $pendanaan = LaporanPendanaan::all();
         return view('admin.pendanaan.index', compact('pendanaan'));

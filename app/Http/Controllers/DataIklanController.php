@@ -14,6 +14,11 @@ class DataIklanController extends Controller
         $this->middleware('auth');
     }
 
+    public function indexGuest(){
+        $iklan = DataIklan::all();
+        return view('guest.iklan.index', compact('iklan'));
+    }
+
     public function index(){
         $iklan = DataIklan::all();
         return view('admin.iklan.index', compact('iklan'));
