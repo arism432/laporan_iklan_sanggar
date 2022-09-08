@@ -11,7 +11,7 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="{{ route('admin.index') }}">Home</a></li>
-                        <li class="breadcrumb-item active">Data Iklann</li>
+                        <li class="breadcrumb-item active">Data Iklan</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -84,6 +84,7 @@
                                 <th>Cost per Outbound click</th>
                                 <th>Outbound click</th>
                                 <th>Messaging coversation started</th>
+                                <th>Action</th>
                             </tr>
                         </tfoot>
                     </table>

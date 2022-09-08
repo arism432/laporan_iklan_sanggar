@@ -26,6 +26,8 @@ class DataLaporanPendanaan extends Migration
             $table->integer('jumlah_setelah_topup');
             $table->string('status_iklan', 20);
             $table->string('keterangan', 255);
+            //
+            $table->timestamps();
         });
     }
 

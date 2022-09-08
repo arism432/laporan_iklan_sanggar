@@ -65,7 +65,7 @@
             <a href="{{ route('admin.index') }}" class="brand-link">
                 <img src="{{ asset('img/AdminLTELogo.png') }}" alt="AdminLTE Logo"
                     class="brand-image img-circle elevation-3" style="opacity: .8">
-                <span class="brand-text font-weight-light">Sanggar Indonesia </span>
+                <span class="brand-text font-weight-light">DIGIMA </span>
             </a>
 
             <!-- Sidebar -->
@@ -112,7 +112,7 @@
                         <li class="nav-item">
                             <a href="{{ route('pendanaan.index') }}"
                                 class="nav-link {{ Request::is('*pendanaan*') ? 'active' : '' }}">
-                                <i class="nav-icon fas fa-project-diagram"></i>
+                                <i class="nav-icon fas fa-money-bill-wave"></i>
                                 <p>
                                     Pendanaan
                                 </p>
@@ -120,8 +120,8 @@
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('iklan.index') }}"
-                                class="nav-link {{ Request::is('*iklan') ? 'active' : '' }}">
-                                <i class="nav-icon fas fa-envelope"></i>
+                                class="nav-link {{ Request::is('*iklan*') ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-audio-description"></i>
                                 <p>
                                     Data Iklan
                                 </p>

@@ -48,21 +48,22 @@
                                 <th>Jumlah Setelah Top Up</th>
                                 <th>Status Iklan</th>
                                 <th>Keterangan</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($pendanaan as $dana)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $dana->daftarAds }}</td>
-                                    <td>{{ $dana->tanggalCekSaldo }}</td>
-                                    <td>{{ $dana->jamCekSaldo }}</td>
-                                    <td>{{ $dana->jumlahSaldo }}</td>
-                                    <td>{{ $dana->tanggalTopup }}</td>
-                                    <td>{{ $dana->jamTopup }}</td>
-                                    <td>{{ $dana->jumlahTopup }}</td>
-                                    <td>{{ $dana->jumlahSetelahTopup }}</td>
-                                    <td>{{ $dana->statusIklan }}</td>
+                                    <td>{{ $dana->daftar_ads }}</td>
+                                    <td>{{ $dana->tanggal_cek_saldo }}</td>
+                                    <td>{{ $dana->jam_cek_saldo }}</td>
+                                    <td>{{ $dana->jumlah_saldo }}</td>
+                                    <td>{{ $dana->tanggal_topup }}</td>
+                                    <td>{{ $dana->jam_topup }}</td>
+                                    <td>{{ $dana->jumlah_topup }}</td>
+                                    <td>{{ $dana->jumlah_setelah_topup }}</td>
+                                    <td>{{ $dana->status_iklan }}</td>
                                     <td>{{ $dana->keterangan }}</td>
                                     <td>
                                         <a href="{{ route('pendanaan.edit', [$dana->id]) }}"
@@ -89,6 +90,7 @@
                                 <th>Jumlah Setelah Top Up</th>
                                 <th>Status Iklan</th>
                                 <th>Keterangan</th>
+                                <th>Action</th>
                             </tr>
                         </tfoot>
                     </table>

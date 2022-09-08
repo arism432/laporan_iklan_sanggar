@@ -37,7 +37,7 @@
                             <div class="col-6">
                                 <div class="form-group">
                                     <label for="Daftar Ads">Daftar Ads</label>
-                                    <input type="text" name="daftarAds" list="daftarAds" class="form-control custom-select @error('daftarAds') is-invalid @enderror" value="{{$pendanaan->daftarAds}}">
+                                    <input type="text" name="daftarAds" list="daftarAds" class="form-control custom-select @error('daftarAds') is-invalid @enderror" value="{{$pendanaan->daftar_ads}}">
                                     <datalist id="daftarAds" name="daftarAds">
                                         <option value="Google Ads 1"></option>
                                         <option value="Google Ads 2"></option>
@@ -53,56 +53,56 @@
                             <div class="col-6">
                                 <div class="form-group">
                                     <label for="Tanggal Cek Saldo">Tanggal Cek Saldo</label>
-                                    <input type="date" name="tanggalCekSaldo" class="form-control @error('tanggalCekSaldo') is-invalid @enderror" value="{{$pendanaan->tanggalCekSaldo}}">
+                                    <input type="date" name="tanggalCekSaldo" class="form-control @error('tanggalCekSaldo') is-invalid @enderror" value="{{$pendanaan->tanggal_cek_saldo}}">
                                     <small class="text-danger">@error('tanggalCekSaldo') {{$message}} @enderror</small>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="form-gorup">
                                     <label for="Jam Cek Saldo">Jam Cek Saldo</label>
-                                    <input type="time" name="jamCekSaldo" class="form-control @error('jamCekSaldo') is-invalid @enderror" value="{{$pendanaan->jamCekSaldo}}">
+                                    <input type="time" name="jamCekSaldo" class="form-control @error('jamCekSaldo') is-invalid @enderror" value="{{$pendanaan->jam_cek_saldo}}">
                                     <small class="text-danger">@error('jamCekSaldo') {($message)} @enderror</small>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="form-group">
                                     <label for="Jumlah Saldo">Jumlah Saldo</label>
-                                    <input type="number" name="jumlahSaldo" class="form-control @error('jumlahSaldo') is-invalid @enderror" value="{{$pendanaan->jumlahSaldo}}">
+                                    <input type="number" name="jumlahSaldo" class="form-control @error('jumlahSaldo') is-invalid @enderror" value="{{$pendanaan->jumlah_saldo}}">
                                     <small class="text-danger">@error('jumlahSaldo') {($message)} @enderror</small>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="form-group">
                                     <label for="Tanggal Top Up">Tanggal Top Up</label>
-                                    <input type="date" name="tanggalTopup" class="form-control @error('tanggalTopup') is-invalid @enderror" value="{{$pendanaan->tanggalTopup}}">
+                                    <input type="date" name="tanggalTopup" class="form-control @error('tanggalTopup') is-invalid @enderror" value="{{$pendanaan->tanggal_topup}}">
                                     <small class="text-danger">@error('tanggalTopup') {($message)} @enderror</small>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="form-group">
                                     <label for="Jam Top Up">Jam Top Up</label>
-                                    <input type="time" name="jamTopup" class="form-control @error('jamTopup') is-invalid @enderror" value="{{$pendanaan->jamTopup}}">
+                                    <input type="time" name="jamTopup" class="form-control @error('jamTopup') is-invalid @enderror" value="{{$pendanaan->jam_topup}}">
                                     <small class="text-danger">@error('jamTopup') {($message)} @enderror</small>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="form-group">
                                     <label for="Jumlah Top Up">Jumlah Top Up</label>
-                                    <input type="number" name="jumlahTopup" class="form-control @error('jumlahTopup') is-invalid @enderror" value="{{$pendanaan->jumlahTopup}}">
+                                    <input type="number" name="jumlahTopup" class="form-control @error('jumlahTopup') is-invalid @enderror" value="{{$pendanaan->jumlah_topup}}">
                                     <small class="text-danger">@error('jumlahTopup') {($message)} @enderror</small>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="form-group">
                                     <label for="Jumlah Setelah Top Up">Jumlah Setelah Top Up</label>
-                                    <input type="number" name="jumlahSetelahTopup" class="form-control @error('jumlahSetelahTopup') is-invalid @enderror" value="{{$pendanaan->jumlahSetelahTopup}}">
+                                    <input type="number" name="jumlahSetelahTopup" class="form-control @error('jumlahSetelahTopup') is-invalid @enderror" value="{{$pendanaan->jumlah_setelah_topup}}">
                                     <small class="text-danger">@error('jumlahSetelahTopup') {($message)} @enderror</small>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="form-group">
                                     <label for="Status Iklan">Status Iklan</label>
-                                    <input type="text" name="statusIklan" list="statusIklan" class="form-control custom-select @error('statusIklan') is-invalid @enderror" value="{{$pendanaan->statusIklan}}">
+                                    <input type="text" name="statusIklan" list="statusIklan" class="form-control custom-select @error('statusIklan') is-invalid @enderror" value="{{$pendanaan->status_iklan}}">
                                     <datalist id="statusIklan" name="statusIklan">
                                         <option value="Eligible"></option>
                                         <option value="Eligible Learning"></option>
@@ -121,7 +121,7 @@
                     <!-- /.row -->
                     <div class="card-footer">
                         <div class="d-flex justify-content-end">
-                            <a href="{{ route('admin.index') }}" class="m-1 btn btn-outline-danger">Back</a>
+                            <a href="{{ route('pendanaan.index') }}" class="m-1 btn btn-outline-danger">Back</a>
                             <button type="submit" class="m-1 btn btn-success">Update</button>
                         </div>
                     </div>

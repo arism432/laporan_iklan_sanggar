@@ -72,6 +72,13 @@
                             </div>
                             <div class="col-6">
                                 <div class="form-group">
+                                    <label for="Ctr All">Ctr All</label>
+                                    <input type="number" name="ctrlAll" class="form-control @error('ctrlAll') is-invalid @enderror" placeholder="">
+                                    <small class="text-danger">@error('ctrAll') {($message)} @enderror</small>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
                                     <label for="Cost per Outbound Click">Cost per Outbound Click</label>
                                     <input type="number" name="costPerOutboundClick" class="form-control @error('costPerOutboundClick') is-invalid @enderror" placeholder="">
                                     <small class="text-danger">@error('costPerOutboundClick') {($message)} @enderror</small>
@@ -87,15 +94,8 @@
                             <div class="col-6">
                                 <div class="form-group">
                                     <label for="Messaging Conversation Started">Messaging Conversation Started</label>
-                                    <input type="number" name="messaging_conversation" class="form-control @error('messaging_conversation') is-invalid @enderror" placeholder="">
-                                    <small class="text-danger">@error('messaging_conversation') {($message)} @enderror</small>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="form-group">
-                                    <label for="Ctr All">Ctr All</label>
-                                    <input type="number" name="ctrl_all" class="form-control @error('ctrl_all') is-invalid @enderror" placeholder="">
-                                    <small class="text-danger">@error('ctrl_all') {($message)} @enderror</small>
+                                    <input type="number" name="messagingConversation" class="form-control @error('messagingConversation') is-invalid @enderror" placeholder="">
+                                    <small class="text-danger">@error('messagingConversation') {($message)} @enderror</small>
                                 </div>
                             </div>
                         </div>
