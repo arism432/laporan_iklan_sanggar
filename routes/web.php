@@ -27,14 +27,16 @@ Route::get('admin', function () {
 Route::resource('admin/pendanaan', LaporanPendanaanController::class);
 Route::resource('admin/iklan', DataIklanController::class);
 
-
+Route::get('guest', function () {
+    return view('guest.index');
+})->name('home');
 Route::resource('guest/pendanaan', LaporanPendanaanController::class);
 Route::resource('guest/iklan', DataIklanController::class);
 Auth::routes();
 
 //Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
 
-Route::get('home', [HomeController::class, 'index'])->name('home');
+//Route::get('home', [HomeController::class, 'index'])->name('home');
 /** Guest User Route List  */
 //Route::middleware(['auth', 'user-access:guest'])->group(function(){
 //    Route::get('/guest/home', [HomeController::class, 'index'])->name('guest.home');
